@@ -10,7 +10,11 @@ Probabilistic Matrix Factorization for Recommendation by R
 大部分注释是作者在学习Ruslan Salakhutdinov的代码时加上的，且为中文注释，英文阅读者可以参考Ruslan Salakhutdinov提供的matlab代码。  
 为了方便展示，除了提供.R文件，我还提供了.Rmd文件。  
 ****
-![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/comparison.png)
+![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/comparison.png)  
+![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/k.png)  
+![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/lambda.png)  
+![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/epsilon.png)  
+![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/momentum.png)  
 ****
 I use R to achieve matrix factorization(mf.R) and probability matrix factorization(pmf.R) algorithm.  
 In the optimization part, stochastic gradient descent(pmf-sgd.R) algorithm and momentum optimization(mf.R,pmf.R) algorithm are used.  
