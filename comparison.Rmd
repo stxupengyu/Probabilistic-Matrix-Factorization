@@ -1,0 +1,151 @@
+1.对比用户、物品隐特征矩阵的维度k对算法的影响
+```{r}
+rm(list=ls())
+path="C:/Users/Lenovo/Desktop/Code/r_pmf" #声明test2.R所在位置
+setwd(path)  #把工作路径设置到path
+source('fun_pmf.R')#“预装“函数
+err=fun_pmf(50,0.1,0.7,50,3)
+err5=fun_pmf(50,0.1,0.7,50,5)
+err7=fun_pmf(50,0.1,0.7,50,7)
+err9=fun_pmf(50,0.1,0.7,50,9)
+err11=fun_pmf(50,0.1,0.7,50,11)
+```
+
+```{r}
+#在训练集上的表现对比
+plot(err$err1,type="l",col=4,lwd=2,main="Train Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.8,1.1))
+lines(err5$err1,type="l",col=3,lwd=2)
+lines(err7$err1,type="l",col=2,lwd=2)
+lines(err9$err1,type="l",col=1,lwd=2)
+lines(err11$err1,type="l",col=5,lwd=2)
+
+legend("topright",c("k=3","k=5","k=7","k=9","k=11"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+```{r}
+#在测试集上的表现对比
+plot(err$err2,type="l",col=4,lwd=2,main="Test Loss Comparison",xlab="epoch",ylab="Loss")
+lines(err5$err2,type="l",col=3,lwd=2)
+lines(err7$err2,type="l",col=2,lwd=2)
+lines(err9$err2,type="l",col=1,lwd=2)
+lines(err11$err2,type="l",col=5,lwd=2)
+
+legend("topright",c("k=3","k=5","k=7","k=9","k=11"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+
+2.对比超参数 正则化参数lambda对算法的影响
+```{r}
+rm(list=ls())
+path="C:/Users/Lenovo/Desktop/Code/r_pmf" #声明test2.R所在位置
+setwd(path)  #把工作路径设置到path
+source('fun_pmf.R')#“预装“函数
+err=fun_pmf(50,0.3,0.7,50,5)
+err5=fun_pmf(50,0.2,0.7,50,5)
+err7=fun_pmf(50,0.1,0.7,50,5)
+err9=fun_pmf(50,0.05,0.7,50,5)
+err11=fun_pmf(50,0.01,0.7,50,5)
+```
+
+```{r}
+#在训练集上的表现对比
+plot(err$err1,type="l",col=4,lwd=2,main="Train Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.8,1.1))
+lines(err5$err1,type="l",col=3,lwd=2)
+lines(err7$err1,type="l",col=2,lwd=2)
+lines(err9$err1,type="l",col=1,lwd=2)
+lines(err11$err1,type="l",col=5,lwd=2)
+
+legend("topright",c("lambda=0.3","0.2","0.1","0.05","0.01"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+```{r}
+#在测试集上的表现对比
+plot(err$err2,type="l",col=4,lwd=2,main="Test Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.9,1.1))
+lines(err5$err2,type="l",col=3,lwd=2)
+lines(err7$err2,type="l",col=2,lwd=2)
+lines(err9$err2,type="l",col=1,lwd=2)
+lines(err11$err2,type="l",col=5,lwd=2)
+
+legend("topright",c("lambda=0.3","0.2","0.1","0.05","0.01"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+3.对比超参数 学习率epsilon对算法的影响
+```{r}
+rm(list=ls())
+path="C:/Users/Lenovo/Desktop/Code/r_pmf" #声明test2.R所在位置
+setwd(path)  #把工作路径设置到path
+source('fun_pmf.R')#“预装“函数
+err=fun_pmf(75,0.1,0.7,50,5)
+err5=fun_pmf(60,0.1,0.7,50,5)
+err7=fun_pmf(50,0.1,0.7,50,5)
+err9=fun_pmf(40,0.1,0.7,50,5)
+err11=fun_pmf(25,0.1,0.7,50,5)
+```
+
+```{r}
+#在训练集上的表现对比
+plot(err$err1,type="l",col=4,lwd=2,main="Train Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.8,1.1))
+lines(err5$err1,type="l",col=3,lwd=2)
+lines(err7$err1,type="l",col=2,lwd=2)
+lines(err9$err1,type="l",col=1,lwd=2)
+lines(err11$err1,type="l",col=5,lwd=2)
+
+legend("topright",c("epsilon=500","100","50","10","1"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+```{r}
+#在测试集上的表现对比
+plot(err$err2,type="l",col=4,lwd=1,main="Test Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.9,1.1))
+lines(err5$err2,type="l",col=3,lwd=1)
+lines(err7$err2,type="l",col=2,lwd=1)
+lines(err9$err2,type="l",col=1,lwd=1)
+lines(err11$err2,type="l",col=5,lwd=1)
+
+legend("topright",c("epsilon=500","100","50","10","1"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+
+4.对比超参数 动量参数momentum对算法的影响
+```{r}
+rm(list=ls())
+path="C:/Users/Lenovo/Desktop/Code/r_pmf" #声明test2.R所在位置
+setwd(path)  #把工作路径设置到path
+source('fun_pmf.R')#“预装“函数
+err=fun_pmf(50,0.1,0.9,50,5)
+err5=fun_pmf(50,0.1,0.8,50,5)
+err7=fun_pmf(50,0.1,0.7,50,5)
+err9=fun_pmf(50,0.1,0.6,50,5)
+err11=fun_pmf(50,0.1,0.5,50,5)
+```
+
+```{r}
+#在训练集上的表现对比
+plot(err$err1,type="l",col=4,lwd=2,main="Train Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.8,1.1))
+lines(err5$err1,type="l",col=3,lwd=2)
+lines(err7$err1,type="l",col=2,lwd=2)
+lines(err9$err1,type="l",col=1,lwd=2)
+lines(err11$err1,type="l",col=5,lwd=2)
+
+legend("topright",c("momentum=0.9","0.8","0.7","0.6","0.5"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+```{r}
+#在测试集上的表现对比
+plot(err$err2,type="l",col=4,lwd=1,main="Test Loss Comparison",xlab="epoch",ylab="Loss",ylim=c(0.9,1.1))
+lines(err5$err2,type="l",col=3,lwd=1)
+lines(err7$err2,type="l",col=2,lwd=1)
+lines(err9$err2,type="l",col=1,lwd=1)
+lines(err11$err2,type="l",col=5,lwd=1)
+
+legend("topright",c("momentum=0.9","0.8","0.7","0.6","0.5"),lty=1,col=c(4,3,2,1,5))
+
+```
+
+
