@@ -8,9 +8,9 @@ Probabilistic Matrix Factorization by R
 我们使用的是MovieLen100k数据集(https://grouplens.org/datasets/movielens/) 包括1682名用户对943部电影的评分信息，共有100,000条评分数据。  
 大部分注释是作者在学习Ruslan Salakhutdinov的代码时加上的，且为中文注释，英文阅读者可以参考Ruslan Salakhutdinov提供的matlab代码。  
 为了方便展示，除了提供.R文件，我还提供了.Rmd文件。  
-
+****
 ![Image text](https://github.com/stxupengyu/Probabilistic-Matrix-Factorization/blob/master/img-folder/comparison.png)
-
+****
 I use R to achieve matrix factorization and probability matrix factorization algorithm.  
 In the optimization part, gradient descent algorithm and momentum optimization algorithm are used.  
 The core part of this code is adapted from matlab code provided by Ruslan salakhutdinov (http://www.utstat.toronto.edu/~rsalakhu/BPMF.html).  
