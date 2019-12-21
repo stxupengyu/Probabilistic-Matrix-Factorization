@@ -1,2 +1,17 @@
 # Probabilistic-Matrix-Factorization
 Probabilistic Matrix Factorization by R
+我使用R语言实现了矩阵分解、概率矩阵分解算法。
+优化部分采用了随机梯度下降算法以及动量优化算法。
+本代码的核心部分改编自Ruslan Salakhutdinov提供的matlab代码（http://www.utstat.toronto.edu/~rsalakhu/BPMF.html）。
+除了输出训练集测试集误差，我们还选取了部分预测评分与真实评分进行比较，显示了非常好的预测性能！
+除了预测评分，我们还考虑了TOP-N推荐，最后可以为每位用户i推荐他最可能感兴趣的j部电影。
+大部分注释是作者在学习Ruslan Salakhutdinov的代码时加上的，且为中文注释，英文阅读者可以参考Ruslan Salakhutdinov提供的matlab代码。
+为了方便展示，除了提供.R文件，我还提供了.Rmd文件。
+
+I use R to achieve matrix factorization and probability matrix factorization algorithm.
+In the optimization part, gradient descent algorithm and momentum optimization algorithm are used.
+The core part of this code is adapted from matlab code provided by Ruslan salakhutdinov (http://www.utstat.toronto.edu/~rsalakhu/BPMF.html).
+In addition to the output training set test set error, we also selected some prediction scores to compare with the real scores, showing a very good prediction performance!
+In addition to the prediction score, we also consider the top-N recommendation. Finally, we can recommend the most likely j movies for each user i.
+Most of the comments are added by the author when learning the code of Ruslan salakhutdinov, and are in Chinese. For English readers, please refer to the matlab code provided by Ruslan salakhutdinov.
+For the convenience of presentation, in addition to the .R file, I also provide the .Rmd file.
