@@ -5,7 +5,7 @@ Probabilistic Matrix Factorization by R
 本代码的核心部分改编自Ruslan Salakhutdinov提供的matlab代码（http://www.utstat.toronto.edu/~rsalakhu/BPMF.html）。
 除了输出训练集测试集误差，我们还选取了部分预测评分与真实评分进行比较，显示了非常好的预测性能！
 除了预测评分，我们还考虑了TOP-N推荐，最后可以为每位用户i推荐他最可能感兴趣的j部电影。
-我们使用的是MovieLen100k数据集(https://grouplens.org/datasets/movielens/)，包括1682名用户对943部电影的评分信息，共有100,000条评分数据。
+我们使用的是MovieLen100k数据集(https://grouplens.org/datasets/movielens/) 包括1682名用户对943部电影的评分信息，共有100,000条评分数据。
 大部分注释是作者在学习Ruslan Salakhutdinov的代码时加上的，且为中文注释，英文阅读者可以参考Ruslan Salakhutdinov提供的matlab代码。
 为了方便展示，除了提供.R文件，我还提供了.Rmd文件。
 
