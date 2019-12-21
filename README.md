@@ -1,5 +1,5 @@
 # Probabilistic-Matrix-Factorization
-Probabilistic Matrix Factorization by R  
+Probabilistic Matrix Factorization for Recommendation by R    
 我使用R语言实现了矩阵分解、概率矩阵分解算法。  
 优化部分采用了随机梯度下降算法以及动量优化算法。  
 本代码的核心部分改编自Ruslan Salakhutdinov提供的matlab代码（http://www.utstat.toronto.edu/~rsalakhu/BPMF.html）。  
