@@ -20,7 +20,7 @@ We use the movielen100k data set(https://grouplens.org/datasets/movielens/), inc
 Most of the comments are added by the author when learning the code of Ruslan salakhutdinov, and are in Chinese. For English readers, please refer to the matlab code provided by Ruslan salakhutdinov.  
 For the convenience of presentation, in addition to the .R file, I also provide the .Rmd file.  
 ****
-Reference：
+Reference:  
 [1] Yehuda Koren, Robert Bell, and Chris Volinsky. 2009. Matrix factorization techniques for recommender systems.Computer 42, 8 (2009), 30–37.  
 [2] R. Salakhutdinov and A. Mnih. Probabilistic matrixfactorization. In Advances in Neural Information Processing Systems (NIPS), volume 20, 2007.  
 [3] Ruder S. An overview of gradient descent optimization algorithms[J]. arXiv preprint arXiv:1609.04747, 2016.  
